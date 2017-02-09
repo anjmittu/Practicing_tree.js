@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<script src="js/three.js"></script>
-		<script src="js/Detector.js"></script>
+		<script src="js/STLLoader.js"></script>
 		<script>
 			var scene = new THREE.Scene();
 			var camera = new THREE.PerspectiveCamera( 70, 1000/545, 0.1, 1000 );
@@ -22,8 +22,8 @@
 			//var cube = new THREE.Mesh( geometry, material );
 			//scene.add( cube );
 
-			var loader = new THREE.JSONLoader();
-	    loader.load( "models/antenna.json", function(geometry){
+			var loader = new THREE.STLLoader();
+	    loader.load( "models/Antenna.STL", function(geometry){
 	      var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 	      var mesh = new THREE.Mesh(geometry, material);
 				mesh.position.x =500;
@@ -37,8 +37,8 @@
 			var render = function () {
 				requestAnimationFrame( render );
 
-				cube.rotation.x += 0.1;
-				cube.rotation.y += 0.1;
+				//cube.rotation.x += 0.1;
+				//cube.rotation.y += 0.1;
 
 				renderer.render(scene, camera);
 			};
