@@ -36,7 +36,7 @@
 
 		var plane = new THREE.Mesh(
 			new THREE.PlaneBufferGeometry( 40, 40 ),
-			new THREE.MeshPhongMaterial( { color: 0x999999, specular: 0x101010 } )
+			new THREE.MeshPhongMaterial( { color: 0x056019, specular: 0x101010 } )
 		);
 		plane.rotation.x = -Math.PI/2;
 		plane.position.y = -.5;
@@ -50,7 +50,7 @@
 		var loader = new THREE.STLLoader();
 		loader.load( './models/Antenna.stl', function ( geometry ) {
 
-			var material = new THREE.MeshLambertMaterial({color: 0x55B663});
+			var material = new THREE.MeshLambertMaterial({color: 0x5b5b5b});
 			var mesh = new THREE.Mesh( geometry, material );
 
 			mesh.position.set( 5, 1.87, -1 );
